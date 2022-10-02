@@ -48,12 +48,16 @@ ex:  this imran is --> data
         ALTER
         DROP
         TRUNCATE
+        
  DML--> INSERT           [UID]
         UPDATE
         DELETE
+        
  DRL--> SELECT
+ 
  DCL--> GRANT
         REVOKE
+        
  TCL--> COMMIT
         ROLLBACK
         SACE POINT
