@@ -3,8 +3,8 @@
 ---null
 
 create table null_tab(id int,
-					  name varchar(20) null,
-					  sal int);
+		      name varchar(20) null,
+		      sal int);
 
 insert into null_tab values(1,null,10000);
 
@@ -16,8 +16,8 @@ select * from null_tab
 
 --while creating a table here I'm giving not noll to the int col
 create table nn_tab(it int not null,
-					name varchar(10),
-					sal int);
+		    name varchar(10),
+		    sal int);
 
 insert into nn_tab values(1,null,10000);
 
@@ -29,8 +29,8 @@ select * from nn_tab
 
 --after creating a table here I'm making not null to the id col
 create table nn_tab1(id int,
-					 name varchar(10),
-					 sal int);
+		     name varchar(10),
+		     sal int);
 
 alter table nn_tab1 alter column id int not null; 
 
@@ -49,8 +49,8 @@ insert into nn_tab1 values(null,null,10000); --Cannot insert the value NULL into
 
 --while creating a table
 create table pk_tab(id int primary key,
-					name varchar(10),
-					sal int);
+		    name varchar(10),
+		    sal int);
 
 insert into pk_tab values(1,null,10000);
 
@@ -59,15 +59,15 @@ insert into pk_tab values(null,null,10000); --Cannot insert the value NULL into 
 insert into pk_tab values(1,null,10000); --Violation of PRIMARY KEY constraint 'PK__pk_tab__3213E83F85AB919F'. Cannot insert duplicate key in object 'dbo.pk_tab'. The duplicate key value is (1).
 
 create table pk2_tab(id int primary key,
-					name varchar(10) primary key,
-					sal int)						--Cannot add multiple PRIMARY KEY constraints to table 'pk2_tab'.
+		     name varchar(10) primary key,
+		     sal int)				--Cannot add multiple PRIMARY KEY constraints to table 'pk2_tab'.
 
 
 --after creating table
 
 create table pk_tab1(id int,
-					name varchar(10) ,
-					sal int)
+		     name varchar(10) ,
+		     sal int)
 
 alter table pk_tab1 add primary key(id); --Cannot define PRIMARY KEY constraint on nullable column in table 'pk_tab1'
 
@@ -88,8 +88,8 @@ insert into pk_tab1 values(1,null,100000) -- Cannot insert duplicate key in obje
 
 --while creating table
 create table uk_tab(id int unique,
-					name varchar(10),
-					loc varchar(20))
+			name varchar(10),
+			loc varchar(20))
 	
 insert into uk_tab values(1,null,'mysour');
 
@@ -103,12 +103,12 @@ insert into uk_tab values(null,null,'mysour')-- Cannot insert duplicate key in o
 select * from uk_tab
 
 create table uk_tab1(id int unique,
-					 name varchar(10),
-					 did int unique);
+			 name varchar(10),
+			 did int unique);
 
 --after creating table
 create table uk_tab_after(id int, 
-						  name varchar(10))
+			 name varchar(10))
 
 alter table uk_tab_after add unique(id);
 
@@ -118,8 +118,8 @@ alter table uk_tab_after add unique(id);
 
 --while creating table
 create table ck_tab(id int,
-					name varchar(10),
-					sal money check(sal<=20000));
+			name varchar(10),
+			sal money check(sal<=20000));
 
 insert into ck_tab values (1,null,10000);
 
@@ -130,8 +130,8 @@ select * from ck_tab
 --after creating table
 
 create table ck_tab1(id int,
-					 name varchar(10),
-					 sal money);
+			name varchar(10),
+			sal money);
 
 alter table ck_tab1 add check(sal<=20000)
 
@@ -144,8 +144,8 @@ insert into ck_tab1 values (2,null,21000); --The INSERT statement conflicted wit
 --while creating table
 
 create table def_tab(id int ,
-					 name varchar(10),
-					 loc varchar(10) default 'hyd');
+			 name varchar(10),
+			loc varchar(10) default 'hyd');
 
 insert into def_tab values(1,null) --Column name or number of supplied values does not match table definition. bcaz table need exact values as much as having in table
 
@@ -176,9 +176,9 @@ insert into def_tab1 values(2,'immu','bnglor')
 ---foreign key
 
 create table emp(eid int primary key,
-				 name varchar(20));
+			name varchar(20));
 
-insert into emp values(1,'immu'),(2,'ummi'),(3,'soor'),(4,'kr');
+insert into emp values(1,'immu'),(2,'ummi'),(3,'soor'),(4,'k');
 
 select * from emp
 
@@ -186,8 +186,8 @@ select * from emp
 
 --while creating table 
 create table prod(pid int,
-				  pname varchar(10),
-				  eid int foreign key references emp(eid));
+		pname varchar(10),
+		eid int foreign key references emp(eid));
 
 insert into prod values(100,'lap',2);
 
@@ -204,8 +204,8 @@ insert into prod values(104,'real',null); --null will be allowed
 --after creating the table
 
 create table prod1(pid int,
-				   pname varchar(20),
-				   eid int);
+		pname varchar(20),
+		eid int);
 
 alter table prod1 add foreign key(eid) references emp(eid);
 
