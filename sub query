@@ -1,9 +1,9 @@
 --sub querys == is a query within another query
 
 create table student(student_id int,
-					 student_name varchar(20), 
-					 student_location varchar(20),
-					 cid int);
+			student_name varchar(20), 
+			student_location varchar(20),
+			cid int);
 
 insert into student values(1,'immu','atp',10),
                            (2,'ummi','atp',10),
@@ -14,9 +14,9 @@ insert into student values(1,'immu','atp',10),
 select * from student
 
 create table course(crouse_id int,
-					 course_name varchar(20), 
-					 course_fee int,
-					 pid int);
+			course_name varchar(20), 
+			 course_fee int,
+			 pid int);
 
 insert into course values(10,'sql',1000,100),
                           (11,'sql',1000,101),
