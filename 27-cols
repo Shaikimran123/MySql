@@ -1,5 +1,5 @@
 
---types of volumns
+--types of columns
 
 create table typecol(id int identity,      --identity
 					name varchar(20),		--normal col
