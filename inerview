@@ -221,10 +221,37 @@ THIRD NORMAL FPORM
       
       
       
-      
-      
-      
-      
+      14. index:
+               An index is a schema object
+                It is used by the server to speed up the retrieval of rows
+                
+                An index helps to speed up select queries and where clauses
+                but it slows down data input, with the update and the insert statements.
+                
+                Indexes can be created or dropped with no effect on the data
+              
+              
+        Syntax:
+
+               CREATE INDEX index
+               ON TABLE column;
+
+       For multiple columns:
+       Syntax:
+
+               CREATE INDEX index
+               ON TABLE (column1, column2,.....);
+
+         -----------------------------------------------------------------------------------------------------------------------------
+        |                   WHERE	                                 |                         HAVING                                   |
+        |-----------------------------------------------------------|------------------------------------------------------------------| 
+        |   This clause is implemented in row operations.	     |      This clause is implemented in column operations.
+        |                                                           |
+        |   It does not allow to work with aggregate functions.     |      It can work with aggregate functions.
+        |                                                           |
+        |   This clause can be used with the SELECT, 	            |      This clause can only be used with the SELECT statement.
+        |  UPDATE, and DELETE statements.                           |
+         ---------------------------------------------------------------------------------------------------------------------------------
       
       
       
