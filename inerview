@@ -88,14 +88,28 @@ REVOKE: It enables system administrators to revoke privileges and roles from the
 
   11.difference between a primary key and a unique key?
 
-  ---------------------------------------------------------------------------------------
-|    primarykey                              |         unique key                         |
-|--------------------------------------------|--------------------------------------------|
-|    --no null values                        |   --only one null value                    |
-|   --no duplicates                          |   --no duplicates                          |
-|  --only one pk                             |   --table allows multiple unique keys      |
-|  --we cant apply pk on nullable col        |   --it can apply on nullable col           |
--------------------------------------------------------------------------------------------
+         ---------------------------------------------------------------------------------------
+       |    primarykey                              |         unique key                         |
+       |--------------------------------------------|--------------------------------------------|
+       |    --no null values                        |   --only one null value                    |
+       |   --no duplicates                          |   --no duplicates                          |
+       |  --only one pk                             |   --table allows multiple unique keys      |
+       |  --we cant apply pk on nullable col        |   --it can apply on nullable col           |
+       -------------------------------------------------------------------------------------------
+
+
+
+         -----------------------------------------------------------------------------------------------------------------------------
+        |                   WHERE	                                 |                         HAVING                                   |
+        |-----------------------------------------------------------|------------------------------------------------------------------| 
+        |   This clause is implemented in row operations.	     |      This clause is implemented in column operations.            |  
+        |                                                           |                                                                  |
+        |   It does not allow to work with aggregate functions.     |      It can work with aggregate functions.                       |
+        |                                                           |                                                                  |
+        |   This clause can be used with the SELECT, 	            |      This clause can only be used with the SELECT statement.     |
+        |  UPDATE, and DELETE statements.                           |                                                                  |
+         -------------------------------------------------------------------------------------------------------------------------------
+      
 
 
  12.What is RDBMS?
@@ -242,17 +256,4 @@ THIRD NORMAL FPORM
                CREATE INDEX index
                ON TABLE (column1, column2,.....);
 
-         -----------------------------------------------------------------------------------------------------------------------------
-        |                   WHERE	                                 |                         HAVING                                   |
-        |-----------------------------------------------------------|------------------------------------------------------------------| 
-        |   This clause is implemented in row operations.	     |      This clause is implemented in column operations.
-        |                                                           |
-        |   It does not allow to work with aggregate functions.     |      It can work with aggregate functions.
-        |                                                           |
-        |   This clause can be used with the SELECT, 	            |      This clause can only be used with the SELECT statement.
-        |  UPDATE, and DELETE statements.                           |
-         ---------------------------------------------------------------------------------------------------------------------------------
-      
-      
-      
-      
+         
