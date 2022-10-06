@@ -256,4 +256,61 @@ THIRD NORMAL FPORM
                CREATE INDEX index
                ON TABLE (column1, column2,.....);
 
-         
+ 15. Define a Relation Schema
+`      
+           Relation Schema is specified as a set of attributes. It is also known as table schema.
+
+
+16.  three levels of data abstraction:
+
+       Physical level : It is the lowest level of abstraction. 
+                        It describes how data are stored.
+
+       Logical level  : It is the next higher level of abstraction. 
+                        It describes what data are stored in the database and what the relationship among those data is.
+
+       View level     : It is the highest level of data abstraction. 
+                        It describes only part of the entire database.
+                        
+  17.There are two integrity rules in DBMS:
+
+              Entity Integrity       : It specifies that "Primary key cannot have a NULL value."
+
+              Referential Integrity : It specifies that "Foreign Key can be either a NULL value or should be the Primary Key value of other relation
+
+
+
+
+                 |------->A===AUTOMICITY      ------>The entair transaction takes place at once or doesn't happen at all
+                 |
+                 |------->C===CONSISTENCES    ------>the database must be consistent before and after transaction
+18. ACID-------->|
+                 |------->I===ISOLATION       ------>multiple transactions occur independently without interference
+                 |  
+                 |------->D===DURABILITY      ------->This property ensures that once the transaction has completed execution, the updates and modifications to the database are stored and they persist even if a system failure occurs
+
+                     ----------------------------------------------------------------------
+                    | Property     |	Responsibility for maintaining properties        |
+                     ----------------------------------------------------------------------
+                    | Atomicity	|       Transaction Manager                             |
+                    | Consistency	|      Application programmer                           |
+                    | Isolation	|      Concurrency Control Manager                      |
+                    | Durability	|      Recovery Manager                                 |
+                    --------------------------------------------------------------------------
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
