@@ -101,7 +101,7 @@ REVOKE: It enables system administrators to revoke privileges and roles from the
 
          -----------------------------------------------------------------------------------------------------------------------------
         |                   WHERE	                                 |                         HAVING                                   |
-        |-----------------------------------------------------------|------------------------------------------------------------------| 
+        |-----------------------------------------------------------|-----------------------------------------------------------------| 
         |   This clause is implemented in row operations.	     |      This clause is implemented in column operations.            |  
         |                                                           |                                                                  |
         |   It does not allow to work with aggregate functions.     |      It can work with aggregate functions.                       |
