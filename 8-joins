@@ -69,19 +69,19 @@ select * from product;
 
 --inner join
 
-select *
-from employee inner join product
-on employee.pid=product.pid;
+select * from 
+employee inner join product
+on 
+employee.pid=product.pid;
 
-select e.eid,
-	   e.name,
-	   p.pname
-from employee e inner join product p
+select e.eid,e.name,p.pname
+from 
+employee e inner join product p
 on e.pid=p.pid;
 
-select e.*,
-	   p.pname
-from employee e inner join product p
+select e.*,p.pname
+from 
+employee e inner join product p
 on e.pid=p.pid; 
 
 
