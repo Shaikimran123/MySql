@@ -38,3 +38,25 @@ if i set no action--> raises the error
          set default --> id i delete any record the default will be injected 
          set null--> null will be injected
          cascade--> if i delect any recoed it will effected to the both tables
+
+
+
+--output for no action
+		
+		The DELETE statement conflicted with the REFERENCE constraint "fid". The conflict occurred in database "sqldb", table "dbo.tblperson", column 'gid'.
+The statement has been terminated.
+
+
+--output for default
+		
+	
+	
+--OUTPUT FOIR NULL
+1	immu	imu@a.com	2
+2	imu	imu@a.com	2
+3	umi	imu@a.com	2
+4	imran	imu@a.com	NULL
+5	soor	imu@a.com	NULL
+6	jan	imu@a.com	NULL
+7	SURI	S@S.COM		3
+	
